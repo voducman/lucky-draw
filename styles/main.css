@@ -1,0 +1,181 @@
+
+.btn-start{
+    background-image: url('../images/btn-yellow-bg.jpg');
+    color: rgba(79, 206, 75, 0.836);
+    line-height: 50px;
+    font-size: 280%;
+    transition: 5s;
+}
+
+.btn-stop{
+    background-image: url('../images/btn-stop-bg.jpg');
+    color: brown;
+    line-height: 50px;
+    font-size: 280%;
+    transition: 5s;
+}
+
+.section-message{
+    color: rgb(110, 64, 37);
+    font-size: 275%;
+}
+/* Text Junping */
+.waiting-message {
+    cursor: default;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    /* height: 100px; */
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+  }
+  
+  .waiting-message strong {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    animation: bounce 0.3s ease infinite alternate;
+    /* text-shadow: 0 1px 0 rgb(184, 152, 95), 0 2px 0 rgb(184, 152, 95), 0 3px 0 rgb(184, 152, 95), 0 4px 0 rgb(184, 152, 95),
+      0 5px 0 rgb(184, 152, 95), 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+      0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);  */
+  }
+  
+ .waiting-message strong:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+ .waiting-message strong:nth-child(2) {
+    animation-delay: 0.15s;
+  }
+  
+ .waiting-message strong:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .waiting-message strong:nth-child(4) {
+    animation-delay: 0.25s;
+  }
+
+
+ .waiting-message strong:nth-child(6) {
+    animation-delay: 0.2s;
+  }
+  
+ .waiting-message strong:nth-child(7) {
+    animation-delay: 0.25s;
+  }
+  
+ .waiting-message strong:nth-child(8) {
+    animation-delay: 0.3s;
+  }
+  
+ .waiting-message strong:nth-child(9) {
+    animation-delay: 0.35s;
+  }
+  
+
+ .waiting-message strong:nth-child(11) {
+    animation-delay: 0.3s;
+  }
+  
+ .waiting-message strong:nth-child(12) {
+    animation-delay: 0.35s;
+  }
+
+
+  .waiting-message strong:nth-child(14) {
+    animation-delay: 0.4s;
+  }
+  
+ .waiting-message strong:nth-child(15) {
+    animation-delay: 0.45s;
+  }
+
+  .waiting-message strong:nth-child(16) {
+    animation-delay: 0.50s;
+  }
+  
+ .waiting-message strong:nth-child(17) {
+    animation-delay: 0.55s;
+  }
+
+  .waiting-message strong:nth-child(18) {
+    animation-delay: 6s;
+  }
+
+  
+  .waiting-message strong:nth-child(20) {
+    animation-delay: 0.5s;
+  }
+
+  .waiting-message strong:nth-child(21) {
+    animation-delay: 0.55s;
+  }
+
+  .waiting-message strong:nth-child(22) {
+    animation-delay: 0.6s;
+  }
+
+
+  .waiting-message strong:nth-child(24) {
+    animation-delay: 0.6s;
+  }
+
+  .waiting-message strong:nth-child(25) {
+    animation-delay: 0.65s;
+  }
+
+  .waiting-message strong:nth-child(26) {
+    animation-delay: 0.7s;
+  }
+
+  .waiting-message strong:nth-child(27) {
+    animation-delay: 0.75s;
+  }
+  .waiting-message strong:nth-child(28) {
+    animation-delay: 0.8s;
+  }
+  .waiting-message strong:nth-child(29) {
+    animation-delay: 0.85s;
+  }
+  
+  
+  /* ANIMATION */
+  @keyframes bounce {
+    100% {
+      top: -4px;
+      text-shadow: 0 1px 0 rgb(51, 35, 23), 0 2px 0 rgb(51, 35, 23), 0 3px 0  rgb(51, 35, 23), 0 4px 0  rgb(51, 35, 23),
+        0 5px 0  rgb(51, 35, 23), 0 6px 0  rgb(51, 35, 23), 0 7px 0  rgb(51, 35, 23), 0 8px 0  rgb(51, 35, 23), 0 9px 0  rgb(51, 35, 23),
+        0 50px 25px rgb(102, 16, 63);
+    }
+  }
+
+
+  /* Shine affect on Name of lucky */
+  .lucky-name {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgb(223, 135, 21), 0 0 20px rgb(223, 135, 21), 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px rgb(223, 135, 21), 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  .transparent{
+      opacity: 0.85;
+  }
+  
