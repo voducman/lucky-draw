@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+
+    <title>Lucky Draw</title>
+    <meta name="author" content="luckydraw.live">
+    <meta name="robots" content="index follow">
+    <meta name="googlebot" content="index follow">
+    <meta name="keywords" content="lucky draw, random name picker, random number generator">
+    <meta name="description" content="World's most sophisticated random number generator.">
+
+    <meta name="viewport" content="width=device-width" id="viewportMeta">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        .loader-block {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 999999;
+            position: fixed;
+            text-align: center;
+            background-color: #ffffff;
+            background-image: url(images/loader.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link rel="stylesheet" href="styles/boostrap-3.3.7.css">
+    <link rel="stylesheet" href="styles/odometer-theme-default.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/odometer.js"      type="text/javascript"></script>
+    <script src="scripts/jquery.min.js"    type="text/javascript"></script>
+    <script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="scripts/bootstrap-notify.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <div class="loader-block" id="loader" style="display: none;"></div>
+    <div class="wrapper">
+        <!-- uiView: -->
+        <ui-view>
+            <id-lucky-draw>
+                <header class="header">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="logo-zone">
+
+                            </div>
+
+                            <div class="col-xs-12">
+
+                                <h1>
+                                    <span class="event-name">
+                                        Funny Lucky Draw
+                                    </span>
+                                </h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="main">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <section class="section section-prize">
+                                    <header class="section-head">
+
+                                        <div class="coin">
+                                            <img class="prize-image" data-prize="consolation" src="images/consolation-big-prize.png">
+                                            <img class="prize-image rotate bronze hidden" data-prize="bronze" src="images/bronze-prize.svg">
+                                            <img class="prize-image rotate hidden" data-prize="silver" src="images/silver-prize.svg">
+                                            <img class="prize-image rotate hidden" data-prize="gold" src="images/gold-prize.svg">
+                                            <img class="prize-image rotate hidden" data-prize="diamond" src="images/diamond-prize.svg">
+                                            <!-- <img class="prize-image" src="images/x-prize.svg"> -->
+                                        </div>
+
+                                    </header>
+
+                                    <div class="section-message">
+                                        <dev>
+                                            <span class="state-ready" style="position: relative; top: 25px">
+                                                Nhấn nút Quay số để bắt đầu
+                                            </span>
+                                            <div class="waiting-message hidden">
+                                                <strong>Đ</strong><strong>a</strong><strong>n</strong><strong>g</strong><strong>&nbsp;</strong>
+                                                <strong>c</strong><strong>h</strong><strong>ọ</strong><strong>n</strong><strong>&nbsp;</strong>
+                                                <strong>r</strong><strong>a</strong><strong>&nbsp;</strong>
+                                                <strong>n</strong><strong>g</strong><strong>ư</strong><strong>ờ</strong><strong>i</strong><strong>&nbsp;</strong>
+                                                <strong>m</strong><strong>a</strong><strong>y</strong><strong>&nbsp;</strong>
+                                                <strong>m</strong><strong>ắ</strong><strong>n</strong>
+                                                <strong>.</strong>
+                                                <strong>.</strong>
+                                                <strong>.</strong>
+
+                                            </div>
+                                            <h1 class="lucky-name hidden"
+                                                style="padding-top: 15px; font-size: 200%; color:darkorange">
+                                                Võ Đức Mẫn
+                                            </h1>
+                                        </dev>
+                                    </div>
+
+                                    <div class="section-body">
+                                        <div class="section-body-inner section-body-inner-primary">
+                                            <ul class="slots">
+
+                                                <li class="slot slot-1of6">
+
+                                                    <div class="slot-item">
+                                                        <div class="slot-number transparent">
+                                                            <span class="number available-1 odometer">
+                                                                <img src="images/bronze-prize.svg">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                </li>
+                                                <li class="slot slot-1of6 state-ready">
+                                                    <div class="slot-item">
+                                                        <div class="slot-number transparent">
+                                                            <span class="number available-2 odometer">
+                                                                <img src="images/bronze-prize.svg">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                </li>
+                                                <li class="slot slot-1of6 state-ready">
+                                                    <div class="slot-item">
+                                                        <div class="slot-number transparent">
+                                                            <span class="number available-3 odometer">
+                                                                <img src="images/bronze-prize.svg">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                </li>
+                                                <li class="slot slot-1of6 state-ready">
+                                                    <div class="slot-item">
+                                                        <div class="slot-number transparent">
+                                                            <span class="number available-4 odometer">
+                                                                <img src="images/bronze-prize.svg">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                </li>
+                                                <li class="slot slot-1of6 state-ready">
+
+                                                    <div class="slot-item">
+                                                        <div class="slot-number transparent">
+                                                            <span class="number available-5 odometer">
+                                                                <img src="images/bronze-prize.svg">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                </li>
+                                                <li class="slot slot-1of6 state-ready">
+                                                    <div class="slot-item">
+                                                        <div class="slot-number transparent">
+                                                            <span class="number available-6 odometer">
+                                                                <img src="images/bronze-prize.svg">
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="section-actions">
+                                        <div class="section-head-actions">
+
+                                            <a class="link-prev link-left">            
+                                                <i class="ion-chevron-left"></i>
+                                            </a>
+
+                                            <span class="prize-text prize-content" style="margin-left: 30px; margin-right: 30px;" data-prize="consolation">
+                                                KHUYẾN KHÍCH
+                                            </span>
+
+                                            <span class="prize-text prize-count ion-person-add hidden">
+                                                0
+                                            </span>
+
+                                            <a class="link-next link-right">
+                                                <i class="ion-chevron-right"></i>
+                                            </a>
+                                        </div>
+                                        <div class="section-button">
+                                            <div>
+                                                <a class="btn btn-yellow btn-yellow-secondary btn-start">
+                                                    <strong id="text">QUAY SỐ</strong>
+                                                </a>
+                                                <a class="btn btn-yellow btn-yellow-secondary btn-stop hidden">
+                                                    <strong id="text">DỪNG</strong>
+                                                </a>
+                                                <a class="btn btn-yellow btn-yellow-primary btn-accept hidden ">
+                                                    <strong id="text">CHẤP NHẬN</strong>
+                                                </a>
+                                                <a class="btn btn-yellow btn-yellow-primary btn-reject hidden">
+                                                    <strong id="text">QUAY LẠI</strong>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <app-footer>
+                    <footer class="footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <nav class="footer-nav light-on">
+
+                                        <li>
+                                            <a id="app-results" data-toggle="tooltip" title="Click để xem toàn bộ kết quả" data-placement="top">
+                                                <i class="ion-android-list"></i>
+                                                <p class="ng-scope">Kết quả</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a id="app-setting" data-toggle="tooltip" title="Click cấu hình giải thưởng" data-placement="top">
+                                                <i class="ion-android-settings"></i>
+                                                <p class="ng-scope">Cài đặt</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a id="app-reset" data-toggle="tooltip" title="Click để reset lại ứng dụng" data-placement="top">
+                                                <i class="ion-android-sync"></i>
+                                                <p class="ng-scope">Reset</p>
+                                            </a>
+                                        </li>
+                                        </ul>
+                                    </nav>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </footer>
+
+                </app-footer>
+            </id-lucky-draw>
+        </ui-view>
+        <img width="1" height="1" appbackground="" ng-src="">
+    </div>
+   
+    <!-- The popup modal -->
+    <button type="button" class="btn btn-info btn-lg hidden" data-toggle="modal" data-target="#myModal">Open Modal</button>   
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="modalLabel" style="color: red; font-weight: bolder; font-size: 30px;">Cấu hình cơ cấu giải
+                        thưởng</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-dark " style="text-align: center !important">
+                        <thead style="font-size: 20px !important; font-weight: bolder !important;">
+                            <tr>
+                                <th scope="col" style="color: rgb(9, 15, 65);">Stt</th>
+                                <th scope="col" style="text-align: center !important; color: rgb(9, 15, 65);">Giải</th>
+                                <th scope="col" style="text-align: center !important; color: rgb(9, 15, 65);">Số lượng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Giải Khuyến Khích</td>
+                                <td><input type="number" class="form-control input-prize" id="consolation-prize" value="1"
+                                        min="0" placeholder="Nhập số"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Giải Ba</td>
+                                <td><input type="number" class="form-control input-prize" id="bronze-prize" value="1"
+                                        min="0" placeholder="Nhập số"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Giải Nhì</td>
+                                <td><input type="number" class="form-control input-prize" id="silver-prize" value="1"
+                                        min="0" placeholder="Nhập số"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Giải Nhất</td>
+                                <td><input type="number" class="form-control input-prize" id="gold-prize" value="1"
+                                        min="0" placeholder="Nhập số"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Giải Đăc Biệt</td>
+                                <td><input type="number" class="form-control input-prize" id="diamond-prize" value="1"
+                                        min="0" placeholder="Nhập số"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success popup-btn" data-dismiss="modal" id="save-config">Save & Close</button>
+                    <button type="button" class="btn btn-warning popup-btn" data-dismiss="modal" style="margin-right: 6px">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- The popup modal -->
+     <button type="button" class="btn btn-views btn-lg hidden" data-toggle="modal" data-target="#view-prizes">Open Modal</button>   
+     <div class="modal fade" id="view-prizes" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" >
+         <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                     <h4 class="modal-title" id="modalLabel" style="color: red; font-weight: bolder; font-size: 30px;">Kết quả quay số</h4>
+                 </div>
+                 <div class="modal-body" id="list-prize">
+                     
+                 </div>
+                
+             </div>
+         </div>
+     </div>
+
+    <script type="text/javascript" src="scripts/employees.js"></script>
+    <script type="text/javascript" src="scripts/setting.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+</body>
+
+</html>

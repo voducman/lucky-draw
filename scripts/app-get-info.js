@@ -48,10 +48,6 @@ function ProcessExcel(data){
     row.appendChild(headerCell);
 
     headerCell = document.createElement("TH");
-    headerCell.innerHTML = "Phone";
-    row.appendChild(headerCell);
-
-    headerCell = document.createElement("TH");
     headerCell.innerHTML = "Email";
     row.appendChild(headerCell);
 
@@ -62,7 +58,7 @@ function ProcessExcel(data){
             continue;
         }
 
-        let obj = {id: "", name: "", phone: "", email: ""};
+        let obj = {id: "", name: "", email: ""};
         //Add the data row.
         let row = table.insertRow(-1);
 
@@ -74,23 +70,18 @@ function ProcessExcel(data){
 
         // Idnetify
         cell = row.insertCell(-1);
-        cell.innerHTML = excelRows[i].__EMPTY;
-        obj["id"] = excelRows[i].__EMPTY;
+        cell.innerHTML = excelRows[i].__EMPTY_1;
+        obj["id"] = excelRows[i].__EMPTY_1;
 
         // Full name
         cell = row.insertCell(-1);
-        cell.innerHTML = excelRows[i].__EMPTY_1;
-        obj["name"] = excelRows[i].__EMPTY_1;
-
-        // Phone
-        cell = row.insertCell(-1);
-        cell.innerHTML = excelRows[i].__EMPTY_3;
-        obj["phone"] = excelRows[i].__EMPTY_3;
+        cell.innerHTML = excelRows[i].__EMPTY_2;
+        obj["name"] = excelRows[i].__EMPTY_2;
 
         // Email
         cell = row.insertCell(-1);
-        cell.innerHTML = excelRows[i].__EMPTY_2;
-        obj["email"] = excelRows[i].__EMPTY_2;
+        cell.innerHTML = excelRows[i].__EMPTY_3;
+        obj["email"] = excelRows[i].__EMPTY_3;
 
         employList.push(obj);
     }
