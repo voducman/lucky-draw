@@ -1,16 +1,27 @@
+
 $("#app-setting").click(function () {
+    document.getElementById('bn-sound').play();
+
     $(".btn-info").trigger("click");
-})
+    
+    // // Auto scroll to bottom of setting-popup
+    // $('#myModal').on('shown.bs.modal', function () {
+    // $('.btn-success').trigger('focus');
+});
 
 $("#app-results").click(function () {
+
     // function for render prizes list
     renderPrizes();
+
+    document.getElementById('bn-sound').play();
+
     $(".btn-views").trigger("click");
 })
 
-$("#setting-html").load("./setting-prize.html");
-
 $("#save-config").click(function () {
+
+    document.getElementById('spin-sound').play();
     // TO-DO list -  get data into data of app
     data.numOfPrize.consolation = $("#consolation-prize").val();
     data.numOfPrize.bronze = $("#bronze-prize").val();
@@ -25,7 +36,7 @@ $("#save-config").click(function () {
 
     $.notify({
         icon: "./images/success-icon.png",
-        message: '<strong style="line-height: 30px; padding-left: 20px;">Cập nhật cơ cấu giải thưởng thành công thành công.</strong>',
+        message: '<strong style="line-height: 30px; padding-left: 20px;">Cập nhật cơ cấu giải thưởng thành công.</strong>',
     }, {
             icon_type: 'image',
             type: 'success'

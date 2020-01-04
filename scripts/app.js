@@ -92,10 +92,13 @@ else {
 
 
 
-let buttons = document.querySelectorAll(".btn-yellow-secondary");
-Array.from(buttons).forEach(ele => {
-    ele.addEventListener('click', handleButton);
-});
+// let buttons = document.querySelectorAll(".btn-yellow-secondary");
+// Array.from(buttons).forEach(ele => {
+//     ele.addEventListener('click', handleButton);
+// });
+
+$('.btn-start').click(handleButton);
+$('.btn-stop').click(handleButton);
 
 if (dataPrize == "consolation"){
     $(".link-right").show();
@@ -107,6 +110,8 @@ $(".link-right").click(function(){
         $(".section-head-actions").css("opacity", "0.45");
         
     }else {
+        document.getElementById('turnon-sound').play();
+
         $(".section-head-actions").css("opacity", "1");
 
         if (dataPrize == "consolation"){
@@ -138,10 +143,13 @@ $(".link-left").click(function(){
         $(".section-head-actions").css("opacity", "0.45");
 
     }else{
+        document.getElementById('turnon-sound').play();
+
         $(".section-head-actions").css("opacity", "1");
 
         if (dataPrize == "diamond"){
             dataPrize = "gold";
+            $(".link-right").show();
             $(".prize-content").html("GIẢI NHẤT");
         }
         else if (dataPrize == "gold"){
@@ -166,6 +174,8 @@ $(".link-left").click(function(){
 
 $(".btn-accept").click(function(){
     // Handle accept
+    document.getElementById('winner-sound').play();
+
     isRunning = false;
     $(".section-head-actions").css("opacity", "1"); 
     $(".btn-start").removeClass("hidden");
@@ -181,6 +191,8 @@ $(".btn-accept").click(function(){
 
 $(".btn-reject").click(function(){
     // Handle reject
+    document.getElementById('go-sound').play();
+
     isRunning = false;
     $(".section-head-actions").css("opacity", "1"); 
     $(".btn-start").removeClass("hidden");
@@ -193,13 +205,15 @@ $(".btn-reject").click(function(){
 
 // Refresh page right now
 $("#app-reset").click(function(){
+    document.getElementById('bn-sound').play();     
     location.reload();
 });
 
-
+let isRun = false;
 function handleButton(){
     if (!data.isConfig){
         // Show notify
+        document.getElementById('go-sound').play();
         $.notify({
             icon: "./images/danger-icon.png", 
             message: '<strong style="line-height: 30px; padding-left: 20px;"> Vui lòng cấu hình giải thưởng trước khi quay số!</strong>',	        
@@ -211,12 +225,14 @@ function handleButton(){
     }
 
     let element = document.querySelector(".btn-start");
-    let isRun = !element.classList.contains("hidden");
+    isRun = !element.classList.contains("hidden");
     let temp;
     
     if (isRun){
 
         if (data.isFull(dataPrize)){
+            document.getElementById('go-sound').play();
+
             $.notify({
                 icon: "./images/danger-icon.png", 
                 message: '<strong style="line-height: 30px; padding-left: 20px;">Giải đã đủ số lượng.</strong>',	        
@@ -226,6 +242,11 @@ function handleButton(){
             });
             return -1;
         }
+        document.getElementById('spin-sound').play();
+        setTimeout(function(){
+            document.getElementById('roller-sound').play();
+        }, 5)
+        
 
         document.querySelector(".btn-start").classList.add("hidden");
         document.querySelector(".btn-stop").classList.remove("hidden");
@@ -233,9 +254,21 @@ function handleButton(){
         document.querySelector(".waiting-message").classList.remove("hidden");
         document.querySelector(".lucky-name").classList.add("hidden");
 
+        // Auto stop scroll number if time is over 60 minutes.
+        setTimeout(function(){
+            if (isRun){
+                $(".btn-stop").click();
+            }
+        }, 30000);
+       
         set6Interval();
         isRunning = true;
     }else {
+        document.getElementById('cd-sound').play();
+        document.getElementById('roller-sound').pause(); 
+
+        document.getElementById('bg-sound').currentTime = 0
+        document.getElementById('bg-sound').play();
 
         // Get results from random function
         do {
@@ -358,6 +391,10 @@ function getRandomEmployID(){
 }
 
 function showLuckyName(name){
+
+    document.getElementById('bg-sound').pause();
+    document.getElementById('brass-sound').play();
+
     document.querySelector(".state-ready").classList.add("hidden");
     document.querySelector(".waiting-message").classList.add("hidden");
 

@@ -64,7 +64,7 @@
 
                                 <h1>
                                     <span class="event-name">
-                                        Funny Lucky Draw
+                                        VHT Lucky Draw
                                     </span>
                                 </h1>
 
@@ -93,8 +93,9 @@
 
                                     <div class="section-message">
                                         <dev>
-                                            <span class="state-ready" style="position: relative; top: 25px">
-                                                Nhấn nút Quay số để bắt đầu
+                                            <span class="state-ready" style="position: relative; top: -20px; text-align: center">
+                                                <p>[Bấm nút cấu hình giải thưởng bên dưới]</p>
+                                                <p>Sau đó nhấn nút Quay số để bắt đầu.</p>
                                             </span>
                                             <div class="waiting-message hidden">
                                                 <strong>Đ</strong><strong>a</strong><strong>n</strong><strong>g</strong><strong>&nbsp;</strong>
@@ -110,7 +111,7 @@
                                             </div>
                                             <h1 class="lucky-name hidden"
                                                 style="padding-top: 15px; font-size: 200%; color:darkorange">
-                                                Võ Đức Mẫn
+                                                Just a placeholder
                                             </h1>
                                         </dev>
                                     </div>
@@ -331,6 +332,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 
 
@@ -348,10 +350,41 @@
                  <div class="modal-body" id="list-prize">
                      
                  </div>
-                
+                 <input type="text" id="bottom-prize" class="hidden">
              </div>
          </div>
      </div>
+
+     <audio id="bg-sound" >
+        <source src="./sounds/background.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="winner-sound" >
+        <source src="./sounds/fanfare-winner.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="cd-sound">
+        <source src="./sounds/game-countdown.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="go-sound" >
+        <source src="./sounds/game-over.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="tada-sound" >
+        <source src="./sounds/game-tada.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="roller-sound" loop>
+        <source src="./sounds/sm-roller-loop.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="spin-sound" >
+        <source src="./sounds/sm-spin.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="turnon-sound" >
+        <source src="./sounds/sm-turnon.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="bn-sound" >
+        <source src="./sounds/game-bonus.mp3" type="audio/mpeg">
+     </audio>
+     <audio id="brass-sound" >
+        <source src="./sounds/fanfare-brass.mp3" type="audio/mpeg">
+     </audio>
 
     <script type="text/javascript" src="scripts/employees.js"></script>
     <script type="text/javascript" src="scripts/setting.js"></script>
